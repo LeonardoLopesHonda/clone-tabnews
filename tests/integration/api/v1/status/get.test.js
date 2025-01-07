@@ -14,11 +14,11 @@ test("GET to /api/v1/status should have connections and version data", async () 
   const responseBody = await response.json();
   const database = responseBody.dependencies.database;
 
-  console.log([
-    database.version,
-    database.max_connections,
-    database.opened_connections,
-  ]);
+  // console.log([
+  //   database.version,
+  //   database.max_connections,
+  //   database.opened_connections,
+  // ]);
 
   // Version should always be a string and the value used in the container
   expect(database.version).toBeDefined();

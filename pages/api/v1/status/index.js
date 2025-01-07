@@ -15,8 +15,6 @@ async function status(request, response) {
     ).rows[0].opened_connections,
   ];
 
-  console.log(result[2]);
-
   response.status(200).json({
     updated_at: updatedAt,
     dependencies: {
